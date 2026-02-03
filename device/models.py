@@ -4,6 +4,8 @@ from django.db import models
 
 class devicedetails(models.Model):
     name = models.TextField()
-    ip = models.CharField(max_length=100,null=True,blank=True)
+    ip = models.CharField(max_length=100, null=True, blank=True)
     location = models.TextField(default="not available")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 

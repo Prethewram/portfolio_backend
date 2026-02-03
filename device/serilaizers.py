@@ -1,8 +1,12 @@
 from rest_framework import serializers
-from .models import *
+from django.utils.timezone import localtime
+from .models import devicedetails
 
 
 class listserializer(serializers.ModelSerializer):
+
     class Meta:
         model = devicedetails
-        fields = '__all__'
+        fields = "__all__"
+
+

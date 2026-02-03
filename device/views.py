@@ -13,3 +13,8 @@ class addname(generics.ListCreateAPIView):
     queryset = devicedetails.objects.all()
     serializer_class = listserializer
     pagination_class = PageNumberPagination
+
+class DeviceDetailsUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = devicedetails.objects.all()
+    serializer_class = listserializer
+    lookup_field = "id"
